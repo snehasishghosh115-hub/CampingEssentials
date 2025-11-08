@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#navbar{
+    display: flex;
+    align-items: center; 
+}
+#logo{
+    margin: 10px 10px;
+}
+#logo img{
+    height: 60px;
+    margin: 2px 4px;
+    background-image: linear-gradient();
+}
+#navbar{
+    position: relative;
+    /* background-image: url('./camp.webp');
+    background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(101, 105, 126,0.76);
+}
+#navbar ul{
+    display: flex;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+#navbar ul li{
+    list-style-type: none;
+    font-size: 1.2rem;
+
+}
+#navbar ul li a{
+    color: white;
+   display: block;
+   padding: 3px 22px;
+   border-radius: 20px;
+   text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+    /* color: black; */
+    height: 400px;
+}
+#home:before{
+    content: "";
+    background: url('../bgalt.avif') no-repeat center/cover;
+    position: absolute;
+    height: 200vh;
+    width: 100vw;
+    z-index: -1;
+    opacity: 0.80;
+}
+#home h1{
+    /* color: white; */
+    text-align: center;
+    font-size: 3.5rem;
+    color: black;
+}
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.h-primary{
+    font-size: 4rem;
+    padding:12px ;
+}
+.btn{
+    padding: 4px 2px;
+    border: 2px solid black;
+    background-color: grey;
+    color: white;
+    margin: 10px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#services{
+    margin: 34px;
+    display: flex;
+}
+#services .box{ 
+    border: 2px solid grey;
+    padding: 0%;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.box > a {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.box a button {
+    margin: auto;
+}
+
+#services .box img{ 
+   width: 100%;
+   margin: auto;
+   display: block;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+    padding: 20px;
+} 
+
+
+#services h1{
+    text-align: center;
+}
+#client-section{ 
+    position: relative;
+}
+
+#client-section::before{
+ content: "";
+ position: absolute;
+ /* background: url('../camp.webp')no-repeat center/cover; */
+ background-size: cover;
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ opacity: 0.8;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item{
+    padding: 34px;
+}
+
+#clients img{
+    height: 124px;
+}
+
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.center{
+    text-align: center;
+}
+#testonomial{
+    background-color: rgba(122, 117, 110, 0.095);
+    height: 50vh;
+}
+
+.p-testimonials {
+    font-family: "Jost", sans-serif;
+    padding-top: 80px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.comments{
+    font-size: 64px;
+    text-align: center;
+    font-weight: 500;
+    padding-bottom: 60px;
+}
+
+.review-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.review img {
+    width:10vh;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.review p {
+    font-family: "Jost", sans-serif;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 16px;
+}
+/* .review h4 {
+    padding-left: 7%;
+    padding-right: 7%;
+    margin-top: 7px;
+    font-size: 17px;
+} */
+
+
+.review h4 {
+    padding-left: 10%;
+    padding-right: 7%;
+    margin-top: 7px;
+    font-size: 17px;
+}
