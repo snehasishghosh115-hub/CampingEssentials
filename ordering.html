@@ -4,119 +4,322 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="ordering.css">
     <style>
         *{
             margin: 0;
             border: 0;
         }
-        section#order{
-            background-color: grey;
+        main{
+            height: 110vh;
+        }
+        #navbar{
+            display: flex;
+            align-items: center; 
+        }
+        #logo{
+            margin: 10px 10px;
+        }
+        #logo img{
+            height: 60px;
+            width: 60px;
+            /*height: 60px;
+            margin: 2px 4px;
+            background-image: linear-gradient();*/
+        } 
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        .services-section {
+            padding: 60px 20px;
+            text-align: center;
+            background: #ffffff;
+        }
+        .services-section h2 {
+            font-size: 2.2em;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+        /* 3×2 Grid Layout */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        /* Service Box Style */
+        .service-box {
+            background: #eaf0f7;
+            border-radius: 10px;
+            padding: 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+        /* Image Style */
+        .service-box img {
             width: 100%;
-            /* height: 400px; */
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
         }
-        section#order>.container{
-            /* max-width: 1500px; */
-            height: 100%;
-            border: 2px solid red;
-            margin: auto;
+        /* Headings and Text */
+        .service-box h3 {
+            margin: 10px 0;
+            color: #1a5276;
+            font-size: 1.2em;
         }
-        div.container>h3{
-            color: aqua;
+        .service-box p {
+            font-size: 0.95em;
+            line-height: 1.6;
+            color: #555;
         }
-        div#main{
-            background-color: blue;
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .services-section {
+                padding: 40px 10px;
+            }
+        }
+        #navbar{
+            position: relative;
+            /* background-image: url('./camp.webp');
+            background-position: center; */
+            /* background-repeat: no-repeat; */
+            /* background-size: cover; */
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            background-color: rgba(101, 105, 126,0.76);
         }
-        div#main button{
-            padding: 10px;
-        }
-        div#individual{
-            background-color: green;
+        #navbar ul{
             display: flex;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
         }
-        div#individuals>div{
-            border: 1ps solid teal;
-            width: 23%;
+        #navbar::before{
+            content: "";
+            background-color: black;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.4;
+        }
+        #navbar ul li{
+            list-style-type: none;
+            font-size: 1.2rem;
+        }
+        #navbar ul li a{
+            color: white;
+            display: block;
+            padding: 3px 22px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+        #navbar ul li a:hover{
+            color: black;
+            background-color: white;
+        }
 
+        
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            margin-top: 40px;
+            letter-spacing: 0.5px;
         }
-        img{
-            width: 400px;
-            height: 400px;
+        footer a {
+            color: #00bfff;
+            text-decoration: none;
+            margin-left: 5px;
         }
+        footer a:hover {
+            text-decoration: underline;
+        }
+         main{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(4,1fr);
+            /* padding: 50px; */
+         }
+         .cat{
+            width: 100%;
+            height: 500px;
+            border: 5px solid black;
+            padding: 20px;
+         }
+         .img{
+            width: 100%;
+            height: 90%;
+         }
+         img{
+            width: 100%;
+            height: 100%;
+         }
+      h1{
+        text-align: center;
+      }
 
     </style>
 </head>
 <body>
-    <nav></nav>
-    <main>
-        <section id="order">
-            <div class="container">
-                <h3>hello ji </h3>
-                <div id="main">
-                    <h1> shop ftom here now </h1>
-                    <div>
-                        <button>&lt;</button><button>&gt;</button>
-                    </div>
-                </div>
-                 <div id="individual">
-                        <div>
-                            <img src="https://contents.mediadecathlon.com/s1294266/k$11dcd0ce966203d7bc988437a04b6a4b/defaut.jpg?format=auto&quality=70&f=768x0" alt="campig essentials" >
-                            <h3>camps</h3>
-                        </div>
-                        <div>
-                            <img src="https://contents.mediadecathlon.com/s1294266/k$11dcd0ce966203d7bc988437a04b6a4b/defaut.jpg?format=auto&quality=70&f=768x0" alt="campig essentials">
-                            <h3>camps</h3>
-                        </div>
-                        <div>
-                            <img src="https://contents.mediadecathlon.com/s1294266/k$11dcd0ce966203d7bc988437a04b6a4b/defaut.jpg?format=auto&quality=70&f=768x0" alt="campig essentials">
-                            <h3>camps</h3>
-                        </div>
-                        <div>
-                            <img src="https://contents.mediadecathlon.com/s1294266/k$11dcd0ce966203d7bc988437a04b6a4b/defaut.jpg?format=auto&quality=70&f=768x0" alt="campig essentials">
-                            <h3>camps</h3>
-                        </div>
-                        <div>
-                            <img src="https://contents.mediadecathlon.com/s1294266/k$11dcd0ce966203d7bc988437a04b6a4b/defaut.jpg?format=auto&quality=70&f=768x0" alt="campig essentials">
-                            <h3>camps</h3>
-                        </div>
-                        <div>
-                            <img src="https://contents.mediadecathlon.com/s1294266/k$11dcd0ce966203d7bc988437a04b6a4b/defaut.jpg?format=auto&quality=70&f=768x0" alt="campig essentials">
-                            <h3>camps</h3>
-                        </div>
-                        <div>
-                            <img src="https://contents.mediadecathlon.com/s1294266/k$11dcd0ce966203d7bc988437a04b6a4b/defaut.jpg?format=auto&quality=70&f=768x0" alt="campig essentials">
-                            <h3>camps</h3>
-                        </div>
-                        <div>
-                            <img src="https://contents.mediadecathlon.com/s1294266/k$11dcd0ce966203d7bc988437a04b6a4b/defaut.jpg?format=auto&quality=70&f=768x0" alt="campig essentials">
-                            <h3>camps</h3>
-                        </div>
-                        <div>
-                            <img src="https://contents.mediadecathlon.com/s1294266/k$11dcd0ce966203d7bc988437a04b6a4b/defaut.jpg?format=auto&quality=70&f=768x0" alt="campig essentials">
-                            <h3>camps</h3>
-                        </div>
-                        <div>
-                            <img src="https://contents.mediadecathlon.com/s1294266/k$11dcd0ce966203d7bc988437a04b6a4b/defaut.jpg?format=auto&quality=70&f=768x0" alt="campig essentials">
-                            <h3>camps</h3>
-                        </div>
-                        <div>
-                            <img src="https://contents.mediadecathlon.com/s1294266/k$11dcd0ce966203d7bc988437a04b6a4b/defaut.jpg?format=auto&quality=70&f=768x0" alt="campig essentials">
-                            <h3>camps</h3>
-                        </div>
-                        <div>
-                            <img src="https://contents.mediadecathlon.com/s1294266/k$11dcd0ce966203d7bc988437a04b6a4b/defaut.jpg?format=auto&quality=70&f=768x0" alt="campig essentials">
-                            <h3>camps</h3>
-                        </div>
-                        
-                 </div>
-            </div>
-        </section>
-    </main>
-    <footer></footer>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="campinglogo.jpg" alt="campingessential.com">
+        </div>
+        <ul>
+            <li class="item"><a href="./index.html">Home</a></li>
+            <li class="item"><a href="#services-container">Services</a></li>
+            <li class="item"><a href="#client-section">About Us</a></li>
+            <li class="item"><a href="./contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+<section class="order-section" id="order">
+    <h2>Order Your Camping Essentials</h2>
+
+    <div class="order-grid">
+
+      <!-- Accessories (4 items) -->
+      <!-- <div class="item-box">
+        <img src="https://images.unsplash.com/photo-1504280390368-3971bdf2c66b" alt="Camping Lantern">
+        <h3>1. Camping Lantern</h3>
+        <p>Bright, long-lasting LED lantern perfect for night adventures.</p>
+        <button>Order Now</button>
+      </div> -->
+
+      <div class="item-box">
+        <img src="https://images.unsplash.com/photo-1622260614153-03223fb72052?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1287" alt="Hiking Backpack">
+        <h3>1. Hiking Backpack</h3>
+        <p>Durable and spacious backpack designed for all your essentials.</p>
+        <button>Order Now</button>
+      </div>
+
+      <div class="item-box">
+        <img src="https://images.unsplash.com/photo-1756332429357-4c73bf5b8e96?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1287" alt="Portable Stove">
+        <h3>2. Portable Stove</h3>
+        <p>Compact and efficient stove for cooking your favorite meals outdoors.</p>
+        <button>Order Now</button>
+      </div>
+
+      <div class="item-box">
+        <img src="https://images.unsplash.com/photo-1662109141645-55e2c004acff?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRyZWNraW5nJTIwc3RpY2tzJTIwJTIwJTIwZm9yJTIwJTIwJTIwY2FtcGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=900" alt="Rechargeable Torch">
+        <h3>3. Trecking sticks</h3>
+        <p>Powerful torch with long battery life and adjustable brightness.</p>
+        <button>Order Now</button>
+      </div>
+
+      <!-- Trekking Equipment (4 items) -->
+      <!-- <div class="item-box">
+        <img src="https://images.unsplash.com/photo-1520962918287-7448c2878f65" alt="Trekking Poles">
+        <h3>5. Trekking Poles</h3>
+        <p>Lightweight poles for extra balance and support on rugged trails.</p>
+        <button>Order Now</button>
+      </div> -->
+
+      <div class="item-box">
+        <img src="https://images.unsplash.com/photo-1600100316331-5c1b7a596029?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGhpa2luZyUyMCUyMHNob2VzJTIwJTIwY2FtcGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=900" alt="Hiking Boots">
+        <h3>4. Hiking Boots</h3>
+        <p>Waterproof and comfortable boots built for long trekking routes.</p>
+        <button>Order Now</button>
+      </div>
+
+      <div class="item-box">
+        <img src="https://images.unsplash.com/photo-1708105559945-ad5d6612c78c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=3732" alt="Sleeping Bag">
+        <h3>5. Sleeping Bag</h3>
+        <p>Stay warm and cozy through the night with our all-weather sleeping bags.</p>
+        <button>Order Now</button>
+      </div>
+
+      <div class="item-box">
+        <img src="https://images.unsplash.com/photo-1624638760852-8ede1666ab07?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2670" alt="First Aid Kit">
+        <h3>6. First Aid Kit</h3>
+        <p>Essential medical supplies for your trekking safety and emergencies.</p>
+        <button>Order Now</button>
+      </div>
+
+      <!-- Camps (4 items) -->
+      <div class="item-box">
+        <img src="https://images.unsplash.com/photo-1624923686627-514dd5e57bae?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=3687" alt="Camping Tent">
+        <h3>7. Camping Tent</h3>
+        <p>Spacious and easy-to-set-up tent ideal for families or solo campers.</p>
+        <button>Order Now</button>
+      </div>
+
+      <div class="item-box">
+        <img src="lantern.jpg" alt="Rain Tarp">
+        <h3>8. Camping Lantern</h3>
+        <p>Weatherproof tarp to shield your gear from rain and sunlight.</p>
+        <button>Order Now</button>
+      </div>
+
+      <div class="item-box">
+        <img src="https://images.unsplash.com/photo-1557102298-24bcd766efc6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGZvbGRhYmxlJTIwJTIwdGFibGUlMjAlMjBmb3IlMjAlMjAlMjBjYW1waW5nfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=900" alt="Folding Camp Chair">
+        <h3>9. Folding Camp Chair</h3>
+        <p>Relax by the campfire with our lightweight and sturdy camp chair.</p>
+        <button>Order Now</button>
+      </div>
+
+      <!-- <div class="item-box">
+        <img src="https://images.unsplash.com/photo-1612197527762-9c99e2c7137b" alt="Cooler Box">
+        <h3>12. Cooler Box</h3>
+        <p>Keep your drinks and food fresh with our insulated cooler box.</p>
+        <button>Order Now</button>
+      </div> -->
+
+      <!-- Additional Items (4 more to make 4 rows) -->
+      <!-- <div class="item-box">
+        <img src="https://images.unsplash.com/photo-1602524206313-c7d3bda22ec8" alt="Camp Cooking Set">
+        <h3>13. Camp Cooking Set</h3>
+        <p>All-in-one cookware set perfect for making meals in the wild.</p>
+        <button>Order Now</button>
+      </div> -->
+
+      <div class="item-box">
+        <img src="https://images.unsplash.com/photo-1542909359-544eb870c007?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tcGFzcyUyMCUyMGFuZCUyMG1hcCUyMGtpdCUyMGNhbXBpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=900" alt="Compass and Map Kit">
+        <h3>10. Compass & Map Kit</h3>
+        <p>Navigate safely with precision tools for your outdoor expeditions.</p>
+        <button>Order Now</button>
+      </div>
+
+      <div class="item-box">
+        <img src="https://images.unsplash.com/photo-1517172770828-dd2c3b6db6b0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Um9wZSUyMCUyNiUyMENhcmFiaW5lciUyMFNldCUyMGZvciUyMCUyMGNhbXBpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=900" alt="Rope and Carabiner Set">
+        <h3>11. Rope & Carabiner Set</h3>
+        <p>Strong ropes and durable carabiners for camping and climbing tasks.</p>
+        <button>Order Now</button>
+      </div>
+
+      <div class="item-box">
+        <img src="https://images.unsplash.com/photo-1611517985210-56438421ab85?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1285" alt="Water Bottle">
+        <h3>12. Insulated Water Bottle</h3>
+        <p>Keep your drinks hot or cold for hours with this double-walled bottle.</p>
+        <button>Order Now</button>
+      </div>
+
+    </div>
+  </section>
+  <footer>
+        <p>Created by Snehasish Ghosh &copy; 2025 |
+            <a href="contact.html">Contact Us</a>
+        </p>
+    </footer>
 
     
 </body>

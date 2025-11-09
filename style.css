@@ -63,9 +63,9 @@
 }
 #home:before{
     content: "";
-    background: url('../bgalt.avif') no-repeat center/cover;
+    background: url('../bg4.avif') no-repeat center/cover;
     position: absolute;
-    height: 200vh;
+    height: 165vh;
     width: 100vw;
     z-index: -1;
     opacity: 0.80;
@@ -77,7 +77,7 @@
     color: black;
 }
 #home p{
-    color:white;
+    color:rgb(9, 75, 54);
     text-align: center;
     font-size: 1.4rem;
 }
@@ -88,7 +88,7 @@
 .btn{
     padding: 4px 2px;
     border: 2px solid black;
-    background-color: grey;
+    background-color: rgb(45, 83, 96);
     color: white;
     margin: 10px;
     font-size: 1.2rem;
@@ -140,7 +140,7 @@
 #client-section::before{
  content: "";
  position: absolute;
- /* background: url('../camp.webp')no-repeat center/cover; */
+ /* background: url('../image.avif')no-repeat center/cover; */
  background-size: cover;
  width: 100%;
  height: 100%;
@@ -244,4 +244,28 @@ footer{
     padding-right: 7%;
     margin-top: 7px;
     font-size: 17px;
+}
+.box a{
+    padding-bottom:  100px;
+    padding-left: 180px;
+}
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin-top: 40px;
+  letter-spacing: 0.5px;
+}
+
+footer a {
+  color: #00bfff;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }

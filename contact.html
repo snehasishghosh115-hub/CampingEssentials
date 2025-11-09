@@ -5,6 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        #navbar{
+            display: flex;
+            align-items: center; 
+        }
+        #logo{
+            margin: 10px 10px;
+        }
+        #logo img{
+            height: 60px;
+            margin: 2px 4px;
+            /* background-image: linear-gradient(); */
+        }
+        #navbar{
+            position: relative;
+            /* background-image: url('./camp.webp');
+            background-position: center; */
+            /* background-repeat: no-repeat; */
+            /* background-size: cover; */
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(101, 105, 126,0.76);
+        }
+        #navbar ul{
+            display: flex;
+        }
+        #navbar::before{
+            content: "";
+            background-color: black;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.4;
+        }
+        #navbar ul li{
+            list-style-type: none;
+            font-size: 1.2rem;
+        }
+        #navbar ul li a{
+            color: white;
+            display: block;
+            padding: 3px 22px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+        #navbar ul li a:hover{
+            color: black;
+            background-color: white;
+        }
         body{
             margin: 0 0;
             position: relative;
@@ -27,7 +76,7 @@
             z-index: -1;
             opacity: 0.7;
     /* background: url('./3bg.jpg')no-repeat center/cover; */
-            background-image: url('./camp.webp');
+            background-image: url('./contact.avif');
             height: 100vh;
     /*background-position: center; */
     /* background-repeat: no-repeat; */
@@ -59,9 +108,42 @@
             font-size: 1.3rem;
             font-family: 'Bree Serif', serif;
         }
+        .contact-footer {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            background-color: #333;
+            color: #f1f1f1;
+            text-align: center;
+            padding: 1px 0;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            border-top: 2px solid #00bfff;
+        }
+        .contact-footer a {
+            color: #00bfff;
+            text-decoration: none;
+            margin-left: 5px;
+        }
+        .contact-footer a:hover {
+            text-decoration: underline;
+            color: #fff;
+        }
+
     </style>
 </head>
 <body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="campinglogo.jpg" alt="campingessential.com">
+        </div>
+        <ul>
+            <li class="item"><a href="./index.html">Home</a></li>
+            <li class="item"><a href="#services-container">Services</a></li>
+            <li class="item"><a href="#client-section">About Us</a></li>
+            <li class="item"><a href="./contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
     <section id="contact">
         <div id="heading">
             <h1>Contact Us</h1>
@@ -89,4 +171,9 @@
         </div>
     </section>
 </body>
+<footer class="contact-footer">
+    <p>Thank you for reaching out! 🌿 <br>Created by Snehasish Ghosh &copy; 2025 |
+        <a href="index.html">Back to Home</a>
+    </p>
+</footer>
 </html>
